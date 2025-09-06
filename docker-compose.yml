@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend2
+    container_name: backend_service
+    ports:
+      - "5000:5000"
+    image: tettolizer/gscomp308:backend
+
+  frontend:
+    build: ./frontend2
+    container_name: frontend_service
+    ports:
+      - "3000:80"
+    image: tettolizer/gscomp308:frontend
+    depends_on:
+      - backend
+
+  javaapp:
+    build:
+      context: .
+      dockerfile: Dockerfile.java
+    container_name: java_service
+    image: tettolizer/gscomp308:java
