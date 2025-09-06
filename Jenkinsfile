@@ -1,6 +1,6 @@
 node {
 // Define environment variables
-env.DOCKERHUB_USERNAME = 'gscomp308'
+env.DOCKERHUB_USERNAME = 'tettolizer'
 env.DOCKER_IMAGE_NAME = "gscomp308"
 env.DOCKER_IMAGE_TAG = "latest"
 
